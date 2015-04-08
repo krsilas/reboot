@@ -1,0 +1,15 @@
+title: Reboot - Pfingsjugendtreffen
+baseurl: ""
+url: "http://reboot.silas.im"
+author:
+    name: EC Pfalz
+    webmaster: Silas Krause
+github_username:  sil4s
+# analytics :
+#   provider : google
+#   google :
+#       tracking_id : 'UA-38956046-1'
+sass:
+    sass_dir: _sass
+
+exclude: [2014, coming_soon]

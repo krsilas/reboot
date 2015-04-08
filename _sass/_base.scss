@@ -1,0 +1,112 @@
+* {margin: 0; }
+ .main {
+     font-family: Roboto, Helvetica, sans-serif;
+}
+
+.content:not(.tabs):not(.chat) {
+    padding: 76px 2% 20px 2%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+@media (min-width: $tablet-size) {
+    .main {margin-left: 25%;}
+}
+.title {margin-bottom: 10px;}
+
+.index {
+#logo {display: block; margin: 0 auto; max-width: 80%;}
+p {
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin-top: 28px;
+  text-align: center;}
+ul {
+  height: 280px;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 320px;
+
+li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 32px;
+  width: 150px;}
+img {
+  height: 40px;
+  vertical-align: -20px;
+  margin: 0 5px;
+  float: left;}
+}}
+
+#countdown {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;}
+
+#gallery {
+    img {
+      float: left;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      width: 49%;
+      &:nth-child(even) {margin-right: 2%;}
+    }
+}
+#tlkio {height: 100%; height: 100vh;}
+.prices {
+    float: left;
+    width: 50%;
+    h4 {font-weight: normal;}
+    h3:not(:nth-child(1)), h4 {margin-left: 64px; line-height: 24px;}
+    img {width: 48px; height: 48px; float: left;}
+    div {height: 48px; padding: 12px;}
+}
+#guest {
+    table {margin-top: 11px; min-width: 20%;}
+    td:nth-child(2n) {text-align: right;}
+    i {font-size: 75%;}
+}
+#warning {
+    background-color: rgba($brand-color,0.95);
+    clear: both;
+    color: white;
+    margin-top: 20px;
+    padding: 12px;
+}
+#tab1, #tab2, #tab3 {margin: 28px auto; width:98%; max-width: 600px; overflow: hidden;}
+#tab1 h3 {text-align: center;}
+.tabs {
+table {
+    border:1px solid #DBDBDB;
+    font-size: 15px;
+    margin: 5px 0 32px 0;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+}
+dd {line-height: 22px; margin: 0 0 12px 20px;}
+dt {font-weight: bold;}
+}
+
+table.striped, #tab1 table {
+    border-collapse: collapse;
+    td {
+    border:1px solid #DBDBDB;
+    padding:9px;
+    vertical-align: top;
+    }
+    tr:nth-child(2n) {background: #EEEEEE;}
+}
+@media (max-width: 600px) {
+    .prices, #guest, #gallery img {width: 100%;}
+  }
+.chromeframe {
+  margin: 0;
+  background: $brand-color;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 9000; }

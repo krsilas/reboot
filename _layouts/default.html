@@ -1,0 +1,21 @@
+<html>
+{% include head.html %}
+<body>
+{% include aside.html %}
+<div class="main">
+<div class="content {% if page.url == '/chat.html' %}chat{% endif %}{% if page.url == '/anmeldung.html' %}preise{% endif %}{% if page.url == '/index.html' %}index{% endif %}{% if page.url == '/programm.html' %}tabs{% endif %}">
+{{ content }}
+</div>
+</div>
+</body>
+<script src="assets/js/jquery.js"></script>
+<script>
+$("#hamburger").click(function() {
+$("#hamburger, aside").toggleClass('active');
+});
+</script>
+{% if page.url == '/index.html' %}<script src="assets/js/countdown.js"></script>{% endif %}
+{% if page.url == '/programm.html' %}<script src="assets/js/tabs.js"></script>{% endif %}
+{% if page.url == '/pics.html' %}
+{% endif %}
+</html>

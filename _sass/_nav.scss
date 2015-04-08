@@ -1,0 +1,142 @@
+aside{
+    font-family: "Source Sans Pro", sans-serif;
+    position: fixed;
+    z-index: 1;
+
+ul {
+    padding: 0;
+    list-style: none;
+    .mdi {
+        heigth: 22px;
+        padding-right: 12px;
+    }
+    li {
+        transition: background-color .4s ease;
+        font-weight: semi-bold;
+        padding: 12px 15px;
+        &:hover {
+        background-color: rgba(0,0,0,0.15);
+        transition: all .4s ease;}
+    }
+}
+a {
+        line-height: 24px;
+        text-decoration: none;
+    }
+}
+.logo {border: none;} /* IE fix */
+@media (min-width: $tablet-size) {
+    aside {
+    background: url('img/love.jpg');
+    background-position: center;
+    color: white;
+    float: left;
+    height: 100vh;
+    height: 100%;
+    width: 25%;
+    min-width: 230px;
+    .logo {width: 220px; margin: 66px auto; display: block;}
+    li {
+        width: 165px;
+        font-size: 1.5em;
+        margin: 0 auto;
+        border-radius: 1px;
+        &:active, &.active {background-color: rgba(0,0,0,0.35);}
+    }
+    a {color: white;}
+    #hamburger {display: none;}
+    footer {bottom: 20px; width: 25%; text-align: center; position: fixed;}
+}}
+@media (max-width: $tablet-size) {
+    aside {
+        width: 100%;
+        background-color: white;
+        height: 56px;
+        nav {background-color: $brand-color; border-bottom: 1px solid $brand-color-dark;}
+        ul, footer {opacity: 0; visibility: hidden;}
+        li {
+            font-size: 1.5em;
+            line-height: 1.2em;
+            width: 100%;
+            &.active {background-color: #E1E1E1; color: #202020;}
+        }
+        &.active {
+            height: 100vh;
+            ul, footer {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .5s ease 0.25s;
+            -webkit-transition: opacity .5s ease 0.25s;
+            }
+            animation-name: slideDown;
+            -webkit-animation-name: slideDown;
+            animation-duration: 350ms;
+            -webkit-animation-duration: 350ms;
+            animation-timing-function: ease-in;
+            -webkit-animation-timing-function: ease-in;
+            footer {position: fixed; bottom: 0; padding-bottom: 10px; text-align: center; width: 100%; }
+        }
+    }
+    .logo {height: 42px; padding: 7px;}
+    a {color: #555555;}
+    #tabs, #tlkio {padding-top: 56px;}
+ }
+@keyframes slideDown {
+    0% {height: 56px;}
+    100% {height: 100vh;}
+}
+@-webkit-keyframes slideDown {
+    0% {height: 56px;}
+    100% {height: 100vh;}
+}
+
+#hamburger {
+    float: right;
+    margin: 18px;
+    cursor: pointer;
+    padding: 9px 30px 13px 0px;
+    span:before {top: -9px;}
+    span:after {bottom: -9px;}
+    span, span:before, span:after {
+        cursor: pointer;
+        height: 4px;
+        width: 30px;
+        background: white;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 350ms ease-out;
+        -webkit-transition: all 350ms ease-out;
+        -o-transition: all 350ms ease-out;
+    }
+}
+
+#hamburger.active {
+    span {background-color: transparent;}
+    span:before {transform: rotate(45deg); -webkit-transform: rotate(45deg);}
+    span:after {transform: rotate(-45deg); -webkit-transform: rotate(-45deg);}
+    span:before, span:after {top: 0;}
+}
+
+#tabs {
+    background-color: white;
+    border-bottom: 1px solid #D1D1D1;
+    height: 56px;
+    list-style-type:none;
+    padding-left: 0px;
+    text-align: center;
+    width: 100%;
+    a {
+    color: #232323;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-weight: 600;
+    padding: 20px 0px 13px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width:33.33%;
+    &:hover {border-bottom: 5px solid #E1E1E1; background-color: #E1E1E1;}
+    &.active {border-bottom: 5px solid $brand-color;}
+    }
+}
