@@ -14,15 +14,14 @@
 .title {margin-bottom: 10px;}
 
 .index {
-#logo {display: block; margin: 0 auto; max-width: 80%;}
-p {
+#logo {max-width: 80%; margin: 0 auto 28px auto; display: block;}
+p:not(.button) {
   font-size: 1.3em;
   font-weight: 300;
   line-height: 1.5em;
-  margin-top: 28px;
   text-align: center;}
 ul {
-  height: 280px;
+  height: 330px;
   list-style: none;
   margin: 0 auto;
   max-width: 320px;
@@ -65,7 +64,7 @@ img {
 }
 #guest {
     table {margin-top: 11px; min-width: 20%;}
-    td:nth-child(2n) {text-align: right;}
+    // td:nth-child(2n) {text-align: right;}
     i {font-size: 75%;}
 }
 #warning {
@@ -86,10 +85,23 @@ table {
     vertical-align: top;
     width: 100%;
 }
-dd {line-height: 22px; margin: 0 0 12px 20px;}
 dt {font-weight: bold;}
 }
-
+dd {line-height: 22px; margin: 0 0 12px 20px;}
+.button {
+    background-color: transparent;
+    border: 1px solid #4a4a4a;
+    border-radius: 25px;
+    color: #4a4a4a;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    margin: 28px auto 0 auto;
+    width: 216px;
+    vertical-align:center;
+    font-size: 20px; text-align: center; text-decoration:none;
+    &:hover {box-shadow: 0 0 3px grey; -webkit-box-shadow: 0 0 30px rgba(grey, 0.25);}
+  }
 table.striped, #tab1 table {
     border-collapse: collapse;
     td {
@@ -99,9 +111,17 @@ table.striped, #tab1 table {
     }
     tr:nth-child(2n) {background: #EEEEEE;}
 }
+.center {display: block; margin: 0 auto;}
 @media (max-width: 600px) {
     .prices, #guest, #gallery img {width: 100%;}
   }
+iframe {
+  width: 100%;
+  height: calc(100vh-76px);
+  height: 90%;
+  border:none;
+  &::-webkit-scrollbar {display: none;}
+}
 .chromeframe {
   margin: 0;
   background: $brand-color;
@@ -109,4 +129,5 @@ table.striped, #tab1 table {
   padding: 10px;
   position: fixed;
   width: 100%;
-  z-index: 9000; }
+  z-index: 9000;
+  a {color: white;}}

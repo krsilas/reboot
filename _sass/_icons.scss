@@ -14,7 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
 }
-
+#infos .mdi {font-size: 1.4em;}
 .mdi-home::before {
   content: "\f307";
 }
@@ -41,4 +41,10 @@
 }
 .mdi-information::before {
   content: "\f31f";
+}
+.mdi-google-maps::before {
+  content: "\f2ee";
+}
+.mdi-facebook-box::before {
+  content: "\f277";
 }

@@ -1,2 +1,4 @@
 .sass-cache
+_site/
 *.css.map
+*.sublime-workspace
