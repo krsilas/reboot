@@ -5,11 +5,8 @@ author:
     name: EC Pfalz
     webmaster: Silas Krause
 github_username:  sil4s
-# analytics :
-#   provider : google
-#   google :
-#       tracking_id : 'UA-38956046-1'
 sass:
     sass_dir: _sass
+    style: compressed
 
 exclude: [2014, coming_soon]

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 {% include head.html %}
 <body>
@@ -12,10 +13,13 @@
 <script>
 $("#hamburger").click(function() {
 $("#hamburger, aside").toggleClass('active');
-});
+});{% if page.url == '/pics.html' %}
+$(document).mousedown(function(event){if(event.which === 3) {alert('Aus rechtlichen Gründen sind die Bilder kopiergeschützt! Bitte melde dich persönlich, falls du Bilder brauchst.');}});{% endif %}
+{% if page.url == '/programm.html' %}
+$("#tabs").each(function(){var a,h,i=$(this).find("a");a=$(i.filter('[href="'+location.hash+'"]')[0]||i[0]),a.addClass("active"),h=$(a[0].hash),i.not(a).each(function(){$(this.hash).hide()}),$(this).on("click","a",function(i){a.removeClass("active"),h.hide(),a=$(this),h=$(this.hash),a.addClass("active"),h.show(),i.preventDefault()})});{% endif %}
 </script>
 {% if page.url == '/index.html' %}<script src="assets/js/countdown.js"></script>{% endif %}
-{% if page.url == '/programm.html' %}<script src="assets/js/tabs.js"></script>{% endif %}
-{% if page.url == '/pics.html' %}
-{% endif %}
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600&subset=latin' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&subset=latin' rel='stylesheet' type='text/css'>
+{% include ganalytics.html %}
 </html>
