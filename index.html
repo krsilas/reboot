@@ -1,7 +1,9 @@
 ---
 layout: default
+title: Index
 ---
-<img id="logo" src="assets/img/lllogo.jpg" alt="Live/Love like there's no tomorrow">
+<img id="logo" src="assets/img/banner17.jpg" alt="We Believe">
+<div class="grad"></div>
 <p>JUGENDTREFFEN für alle ab 13 Jahren <br> Auf dem Programm steht: </p>
 <ul>
     <li><img src="assets/img/message.png" />Message</li>
@@ -13,10 +15,16 @@ layout: default
     <li><img src="assets/img/essen.png" />mega Essen</li>
     <li><img src="assets/img/gem.png" />Gemeinschaft</li>
 </ul>
-<p style="clear:both;">Reboot 2015 startet in:</p>
-<div id="countdown"></div>
-<a href="preise.html" class="button">Zur Anmeldung ></a>
-<br>
+<p id="date"> {% assign date = site.data.data.date %}
+  <b>Datum:</b><br>Freitag, {{date.start | date: "%-d." }}{% assign m = date.start | date: "%-m" %}  {% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %} - Montag, {{date.start | date:'%s' | plus:259200 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:259200 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}
+</p>
+<div class="cta" id="cdd">
+  <a href="/programm" class="button">Zum Programm <img class="icon icons8-Forward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA9UlEQVRoQ+3ZwQ3CMBBE0UknlAaVQWdQCvLBEkJckp35K6Pknug/by4rb1r82Rbv1wnonqBrAhdJrw6MA3CVdJd0k/SgEVXAjJ/dOKICGL/N88eJo4gKYLR/TwCfRBXQjnAAWhEuQBvCCWhBuAE4IgFAESkAhkgCEEQaEEcQgCiCAsQQJCCCoAF2RAfAiugC2BAn4OAObFuEOiZgix+HRwOs8TTAHk8CIvEUIBZPAKLxaUA8PglA4lMALD4BQOPdADzeCWiJdwHa4h2A1vgq4C8vONDbmeoE5i6z9CXfRCx9zXpwq/S8Rm9knuqPr5wA+5Hu/OAbastOMV6G9bYAAAAASUVORK5CYII=" width="15" height="15"></a>
+</div>
+<div class="cta" id="cdr">
+  <p>Reboot started in:</p><div id="countdown"></div><a href="https://www.facebook.com/reboot.lachen/videos/511802059015311/" class="button">Aftermovie <img class="icon icons8-Forward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA9UlEQVRoQ+3ZwQ3CMBBE0UknlAaVQWdQCvLBEkJckp35K6Pknug/by4rb1r82Rbv1wnonqBrAhdJrw6MA3CVdJd0k/SgEVXAjJ/dOKICGL/N88eJo4gKYLR/TwCfRBXQjnAAWhEuQBvCCWhBuAE4IgFAESkAhkgCEEQaEEcQgCiCAsQQJCCCoAF2RAfAiugC2BAn4OAObFuEOiZgix+HRwOs8TTAHk8CIvEUIBZPAKLxaUA8PglA4lMALD4BQOPdADzeCWiJdwHa4h2A1vgq4C8vONDbmeoE5i6z9CXfRCx9zXpwq/S8Rm9knuqPr5wA+5Hu/OAbastOMV6G9bYAAAAASUVORK5CYII="  width="15" height="15"></a>
+</div>
 <p>Veranstaltungsort: <a href="https://goo.gl/maps/LEvgc">Diakonissen-Mutterhaus Lachen</a></p>
 <br><br>
 <img class="center" style="max-width:400px; width:95%;" src="assets/img/ec-pfalz.png" alt="ec-pfalz-logo" />
+<br><br>

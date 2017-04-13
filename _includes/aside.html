@@ -1,18 +1,25 @@
 <aside>
 <nav>
-<a href="http://jesusatthemotherhouse.de" class="logo">
+<a href="http://reboot.ec-pfalz.de" class="logo">
 <img src="assets/img/logo.png" />
-<div class="facts"><h2>22.-25. Mai</h2> Diakonissen-Mutterhaus Lachen</div>
+<div class="facts">
+  <h2>{% assign date = site.data.data.date %}
+    {% if date.conflict %}
+    {{date.start | date: "%-d.%-m."}}-{{date.start | date:'%s' | plus:259200 | date:"%-d.%-m.%Y"}}
+    {% else %}
+    {{date.start | date: "%-d."}}-{{date.start | date:'%s' | plus:259200 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:259200 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}
+  {% endif %}</h2>
+  Diakonissen-Mutterhaus Lachen
+</div>
 </a>
-
 <a id="hamburger" href="#"><span></span></a>
 </nav>
 <ul>
-    <a href="index.html"><li{% if page.url == '/index.html' %} class="active"{% endif %}><i class="mdi mdi-home"></i>Home</li></a>
+    <a href="index.html"><li{% if page.title == 'Index' %} class="active"{% endif %}><i class="mdi mdi-home"></i>Home</li></a>
     <a href="programm.html"><li{% if page.url == '/programm.html' %} class="active"{% endif %}><i class="mdi mdi-view-agenda"></i>Programm</li></a>
     <a href="message.html"><li{% if page.url == '/message.html' %} class="active"{% endif %}><i class="mdi mdi-book"></i>Message</li></a>
     <a href="pics.html"><li{% if page.url == '/pics.html' %} class="active"{% endif %}><i class="mdi mdi-film"></i>Bilder</li></a>
-    <a href="chat.html"><li{% if page.url == '/chat.html' %} class="active"{% endif %}><i class="mdi mdi-comment-multipe-outline"></i>Chat</li></a>
+    <a href="social.html"><li{% if page.url == '/social.html' %} class="active"{% endif %}><i class="mdi mdi-comment-multipe-outline"></i>Social</li></a>
     <a href="preise.html"><li{% if page.url == '/preise.html', '/anmeldung.html' %} class="active"{% endif %}><i class="mdi mdi-ticket-account"></i>Anmeldung</li></a>
 </ul>
 <footer>

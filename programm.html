@@ -6,180 +6,54 @@ layout: default
     <a href="#tab2">Workshops</a>
     <a href="#tab3">Seminare</a>
 </div>
-<div id="tab1">
-<h3>Freitag, 22. Mai</h3>
+<div id="tab1"> {% assign date = site.data.data.date %}
+<h3>Freitag, {{date.start | date: "%-d." }}{% assign m = date.start | date: "%-m" %}  {% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
 <table>
-    <tr>
-      <td>16:00 Uhr</td>
-      <td>Anreise und Zeltaufbau</td>
-    </tr>
-    <tr>
-      <td>17:00 Uhr</td>
-      <td>Anmeldung</td>
-    </tr>
-    <tr>
-      <td>18:00 Uhr</td>
-      <td>Currywurst- und Pommesverkauf im Bistro</td>
-    </tr>
-    <tr>
-      <td>19:30 Uhr</td>
-      <td>Mainsession 1:<br/><b>LOVE others - LIEBE & Fremde</b></td>
-    </tr>
-    <tr>
-      <td>21:00 Uhr</td>
-      <td>Anmeldung</td>
-    </tr>
-    <tr>
-      <td>21:30 Uhr</td>
-      <td>Lagerfeuer, Bistro, Disco</td>
-    </tr>
-    <tr>
-      <td>01:00 Uhr</td>
-      <td>Nachtruhe</td>
-    </tr>
+  {% for programm in site.data.shedule.day1 %}
+  <tr>
+    <td>{{programm.time}}</td>
+    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+  </tr>
+  {% endfor %}
 </table>
-<h3>Samstag, 23. Mai</h3>
+<h3>Samstag, {{date.start | date:'%s' | plus:129600 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:129600 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
 <table>
-    <tr>
-      <td>08:30 Uhr</td>
-      <td>Fr&uuml;hst&uuml;ck</td>
-    </tr>
-    <tr>
-      <td>09:00 Uhr</td>
-      <td>Bibellesen</td>
-    </tr>
-    <tr>
-      <td>10:00 Uhr</td>
-      <td>Mainsession 2:<br/><b>LOVE yourself - LIEBE & Du</b></td>
-    </tr>
-    <tr>
-      <td>11:30 Uhr</td>
-      <td>Anmeldung <b>(letzte Möglichkeit)</b></td>
-    </tr>
-    <tr>
-      <td>12:00 Uhr</td>
-      <td>Mittagessen</td>
-    </tr>
-    <tr>
-      <td>12:30 Uhr</td>
-      <td>EC LiftUp (Delegiertenversammlung)</td>
-    </tr>
-    <tr>
-      <td>14:00 Uhr</td>
-      <td>Workshops Teil 1</td>
-    </tr>
-    <tr>
-      <td>16:00 Uhr</td>
-      <td>Workshops Teil 2</td>
-    </tr>
-    <tr>
-      <td>18:00 Uhr</td>
-      <td>Abendessen</td>
-    </tr>
-    <tr>
-      <td>19:30 Uhr</td>
-      <td>Mainsession 3:<br/><b>LOVE god - LIEBE & Gott (+ Song150)</b></td>
-    </tr>
-    <tr>
-      <td>22:00 Uhr</td>
-      <td>Lagerfeuer, Bistro, Chillen</td>
-    </tr>
-    <tr>
-      <td>22:30 Uhr</td>
-      <td>Open Air Kino</td>
-    </tr>
-    <tr>
-      <td>01:00 Uhr</td>
-      <td>Nachtruhe</td>
-    </tr>
+  {% for programm in site.data.shedule.day2 %}
+  <tr>
+    <td>{{programm.time}}</td>
+    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+  </tr>
+  {% endfor %}
 </table>
-<h3>Sonntag, 24. Mai</h3>
+<h3>Sonntag, {{date.start | date:'%s' | plus:194400 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:194400 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
 <table>
-    <tr>
-      <td>08:30 Uhr</td>
-      <td>Fr&uuml;hst&uuml;ck</td>
-    </tr>
-    <tr>
-      <td>09:00 Uhr</td>
-      <td>Bibellesen</td>
-    </tr>
-    <tr>
-      <td>10:00 Uhr</td>
-      <td>Mainsession 4:<br/><b>LOVE your friends - LIEBE & deine Freunde</b></td>
-    </tr>
-    <tr>
-      <td>12:00 Uhr</td>
-      <td>Mittagessen</td>
-    </tr>
-    <tr>
-      <td>14:00 Uhr</td>
-      <td>Seminare Teil 1</td>
-    </tr>
-    <tr>
-      <td>16:00 Uhr</td>
-      <td>Seminare Teil 2</td>
-    </tr>
-    <tr>
-      <td>18:00 Uhr</td>
-      <td>Abendessen</td>
-    </tr>
-    <tr>
-      <td>19:30 Uhr</td>
-      <td>Mainsession 5:<br/><b>LOVE to live - LIEBE & das Leben</b></td>
-    </tr>
-    <tr>
-      <td>22:00 Uhr</td>
-      <td>Lagerfeuer, Bistro, Chillen</td>
-    </tr>
-    <tr>
-      <td>23:00 Uhr</td>
-      <td>Feiern!</td>
-    </tr>
-    <tr>
-      <td>02:30 Uhr</td>
-      <td>Nachtruhe</td>
-    </tr>
+  {% for programm in site.data.shedule.day3 %}
+  <tr>
+    <td>{{programm.time}}</td>
+    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+  </tr>
+  {% endfor %}
 </table>
-<h3>Montag, 25. Mai</h3>
+<h3>Montag, {{date.start | date:'%s' | plus:259200 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:259200 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
 <table>
-    <tr>
-      <td>08:30 Uhr</td>
-      <td>Fr&uuml;hst&uuml;ck</td>
-    </tr>
-    <tr>
-      <td>09:00 Uhr</td>
-      <td>Bibellesen</td>
-    </tr>
-    <tr>
-      <td>10:00 Uhr</td>
-      <td>Mainsession 6:<br/><b>LIVE LOVE - LIEBE & dein Alltag</b></td>
-    </tr>
-    <tr>
-      <td>12:00 Uhr</td>
-      <td>Packen, Aufr&auml;umen und Gro&szlig;es Buffet!</td>
-    </tr>
+  {% for programm in site.data.shedule.day4 %}
+  <tr>
+    <td>{{programm.time}}</td>
+    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+  </tr>
+  {% endfor %}
 </table>
- </div>
+</div>
 
 <div id="tab2">
 <h4>Jeweils am Samstag um 14:00 und 16:00 Uhr <br>
 (falls ein Workshop nur 1 Mal angeboten wird, wirst du das auf REBOOT erfahren)</h4>
 <br>
 <dl>
-<dt>1. Slacklining</dt>
-<dd>Balance, Tricks, Akrobatik... <br> Mit Rosi Daum könnt ihr die neue Trendsportart ausprobieren.</dd>
-<dt>2. Action - Erlebnispädagogik</dt>
-<dd>Let's fetz! <br> Johannes Müller lädt alle Abenteuerlustigen zu einer fetten Aktion ein.</dd>
-<dt>3. Dance!</dt>
-<dd>Heiße Moves und coole Choreos! <br> Tabea Bachtler macht euch zur Tanzkönigin oder zum Tanzkönig.</dd>
-<dt>4. Chor-Workshop</dt>
-<dd>Du liebst Singen und möchtest mit deiner Stimme die Liebe Jesus verbreiten? Anke und Matthias singen mit euch und üben ein Lied für die Abendveranstaltung ein.</dd>
-<dt>5. Fotografie</dt>
-<dd>Kreative Motive knipsen! <br> Zusammen mit Wladimir lernst du Basics und Tricks der Fotografie kennen. <br> <i>Bitte Kamera oder Smartphone mitbringen!</i></dd>
-<dt>6. GoPro (Fun & Action)</dt>
-<dd>Alex Neber zeigt euch, wie man coole Aufnahmen mit der Actionkamera macht und filmt mit euch Material für den Aftermovie.</dd>
-<dt>7. Sport</dt>
-<dd>Volleyballtunier, Rugby & Fußball</dd>
+  {% for programm in site.data.programm.workshops %}
+  <dt>{{programm.title}}</dt>
+  <dd>{{programm.description}}</dd>
+  {% endfor %}
 </dl>
 </div>
 
@@ -188,24 +62,10 @@ layout: default
 (falls ein Seminar nur 1 Mal angeboten wird, wirst du das auf REBOOT erfahren)</h4>
 <br>
 <dl>
-<dt>1. Wie kann ich mich selbst lieben? (für Mädels von 13-17 Jahren)</dt>
-<dd>Bin ich liebenswert? Woher bekomme ich meinen Wert? Wie kann ich mich endlich selbst annehmen…? Maike Stöhr gibt dir wertvolle Tipps, um dich selbst zu finden.</dd>
-<dt>2. Interkultureller Dialog - Christentum & Islam</dt>
-<dd>Allah, Gott, Mohammed und Jesus Christus? Johannes Belger klärt auf und zeigt dir, wie man mit Andersgläubigen gut ins Gespräch kommen kann.</dd>
-<dt>4. Selbstlose Liebe</dt>
-<dd>Das Hauptmerkmal von Liebe ist es, sich zu verschenken. Wie sieht das aber praktisch aus? Ein ermutigender Praxisbericht über Diakonie.</dd>
-<dt>5. Flirten zwischen Verbindlichkeit und Freiheit (für junge Frauen ab 18 Jahren)</dt>
-<dd>Der Weg vom Singlesein bis zur Ehe ist mit manchen Stolpersteinen versehen - Frau muss aber nicht fallen. Nina Perl freut sich auf den Austausch und gibt euch Hilfen mit auf diesen Weg.</dd>
-<dt>6. Thema Nr. 1 (für junge Männer ab 18)</dt>
-<dd>Es ist überall – um uns herum und in uns drin: Sex. Ein mega Geschenk mit gewaltigem Suchtpotential. Carsten Perl denkt ehrlich mit euch nach, wie Mann gut über Sex reden und damit umgehen kann.</dd>
-<dt>7. Sehnsucht nach dem Heiligen Geist</dt>
-<dd>Was ist mit den übernatürlichen Gaben des Heiligen Geistes, von denen wir in der Bibel lesen: Gebet, Heilung, Prophetie, Zungenrede…? David Müller lädt dich ein, Gottes Geist Raum zu geben.</dd>
-<dt>8. Die 5 Sprachen der Liebe</dt>
-<dd>Wann fühlst du dich geliebt? Wie kannst du andere lieben? Jeder Mensch hat seine eigene Liebessprache. Was füllt deinen Liebestank, was den deiner Mitmenschen? Lerne, um Liebe zu leben.</dd>
-<dt>9. Liebesopfer – Wenn die Liebe zu Gott etwas kostet</dt>
-<dd>Jeder darf glauben, was er will? Naja, nicht wirklich und v.a. nicht überall. So viel Christenverfolgung wie in unserer Zeit gab es in der Weltgeschichte bisher noch nie. Ein sehr persönliches Zeugnis eines verfolgten Christen.</dd>
-<dt>10. Nur für Jungs! (für Jungs von 13-17 Jahren)</dt>
-<dd>Junge, 15 Jahre alt, Pubertät, Hormonüberschuss, Action, Sensibilität, Mädels, Zocken, Alles ausprobieren, Wer-bin-ich-überhaupt?… Johannes Müller packt mit euch die heißen Eisen an, die euch beschäftigen.</dd>
+  {% for programm in site.data.programm.seminare %}
+  <dt>{{programm.title}}</dt>
+  <dd>{{programm.description}}</dd>
+  {% endfor %}
 </dl>
 </div>
 

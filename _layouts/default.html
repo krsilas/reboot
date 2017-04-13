@@ -4,12 +4,12 @@
 <body>
 {% include aside.html %}
 <div class="main">
-<div class="content {% if page.url == '/chat.html' %}chat{% endif %}{% if page.url == '/preise.html' %}preise{% endif %}{% if page.url == '/index.html' %}index{% endif %}{% if page.url == '/programm.html' %}tabs{% endif %}">
+<div class="content {% if page.url == '/social.html' %}social{% endif %}{% if page.url == '/preise.html' %}preise{% endif %}{% if page.title== 'Index' %}index{% endif %}{% if page.url == '/programm.html' %}tabs{% endif %}{% if page.url == '/anmeldung.html' %}anmeldung{% endif %}">
 {{ content }}
 </div>
 </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 $("#hamburger").click(function() {
 $("#hamburger, aside").toggleClass('active');
@@ -18,8 +18,7 @@ $(document).mousedown(function(event){if(event.which === 3) {alert('Aus rechtlic
 {% if page.url == '/programm.html' %}
 $("#tabs").each(function(){var a,h,i=$(this).find("a");a=$(i.filter('[href="'+location.hash+'"]')[0]||i[0]),a.addClass("active"),h=$(a[0].hash),i.not(a).each(function(){$(this.hash).hide()}),$(this).on("click","a",function(i){a.removeClass("active"),h.hide(),a=$(this),h=$(this.hash),a.addClass("active"),h.show(),i.preventDefault()})});{% endif %}
 </script>
-{% if page.url == '/index.html' %}<script src="assets/js/countdown.js"></script>{% endif %}
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600&subset=latin' rel='stylesheet' type='text/css'>
+{% if page.title == 'Index' %}<script src="assets/js/countdown.js"></script>{% endif %}
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&subset=latin' rel='stylesheet' type='text/css'>
 {% include ganalytics.html %}
 </html>

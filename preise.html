@@ -1,42 +1,29 @@
 ---
 layout: default
 ---
+{% assign data = site.data.data %}
 <h1 class="title">Anmeldung</h1>
 <div class="prices">
 <h3>Dauergäste</h3>
     <div>
         <img src="assets/img/camp.png" alt="Camper" id="camper"></img>
         <h4>Camper (eigenes Zelt)</h4>
-        <h3>40€</h3>
+        <h3>{{data.prices.camper}}€</h3>
     </div>
     <div>
         <img src="assets/img/nomoney.png" alt="Nicht-Verdiener"></img>
-        <h4>Nicht-Verdiener</h4>
-        <h3>70€</h3>
+        <h4>Nicht-Verdiener (Haus)</h4>
+        <h3>{{data.prices.student}}€</h3>
     </div>
     <div>
         <img src="assets/img/money.png" alt="Verdiener"></img>
-        <h4>Verdiener</h4>
-        <h3>85€</h3>
+        <h4>Verdiener (Haus)</h4>
+        <h3>{{data.prices.earner}}€</h3>
     </div>
 </div>
-
 <div id="guest">
 <h3>Tagesgäste</h3>
-<table>
-    <tr>
-        <td>Freitag</td>
-        <td>gratis</td>
-    </tr>
-    <tr>
-        <td>Samstag & Sonntag: </td>
-        <td>30€ (inkl. Essen)</td>
-    </tr>
-    <tr>
-        <td>Montag: </td>
-        <td>gratis</td>
-    </tr>
-</table>
+<p>{{data.prices.visitor}}€ (inkl. Essen)</p>
 <table id="infos">
 <tr>
 <td><i class="mdi mdi-google-maps"></i></td>
@@ -49,10 +36,10 @@ layout: default
 </table>
 </div>
 <p id="warning">
-Anmeldeschluss: Dienstag, 18. Mai - Mindestalter: 13 Jahre <br>
+Anmeldeschluss: Montag, {{data.date.start | date:'%s' | minus:345600 | date:"%-d. "}}{% assign m = data.date.start | date:'%s' | minus:345600 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %} - Mindestalter: 13 Jahre <br>
 Für Anmeldungen und &Auml;nderungen vor Ort wird eine zusätzliche Bearbeitungsgeb&uuml;hr von 5€ erhoben.
 </p>
-<a href="anmeldung.html" class="button">ANMELDEN</a>
+<a href="#" onclick="alert('Die Onlineanmeldung ist noch nicht eröffnet!')" class="button">ANMELDEN</a>
 <div id="php"></div>
 <br>
 

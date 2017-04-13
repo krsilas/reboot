@@ -2,58 +2,44 @@
 layout: default
 ---
 <h1 class="title">Mainsessions</h1>
-<p>6 Jugendgottesdienste, die es in sich haben: eine super Stimmung, erfrischender Lobpreis mit der REBOOTBAND und eine Message, von der wir erwarten, dass Gott dir mitten ins Herz spricht! <br><br>
+<p>6 Jugendgottesdienste, die es in sich haben: eine super Stimmung, erfrischender Lobpreis mit der REBOOTBAND und eine Message, von der wir erwarten, dass Gott dir mitten ins Herz spricht! <br>
 Für die Message sind dieses Jahr dabei:</p>
-<img class="center" style="width: 90%;" src="assets/img/referenten.jpg" alt="">
+<div id="ref">
+  <div id="ref1">
+    {% assign ref = site.data.programm.referenten %}
+    <img src="assets/img/{{ref.ref1.img_url}}" alt="{{ref.ref1.name}}">
+    <h2>{{ref.ref1.name}}</h2>
+    <p>
+      {{ref.ref1.text}}
+        <!-- Nach dem Abi in Mittelfranken kamen 5 Semester BWL. Megagähn. Parallel habe ich die Jugendarbeit im EC-Sachsen (bei Ansbach) näher kennengelernt. Megayeah. In der Zeit habe ich gemerkt: Gott hat Zukunftspläne - sogar für mich persönlich. Naja, irgendwann hab ich's dann gecheckt und ein folgenschweres Gebet gesprochen: "Ok, Gott, ich werde mit dir gehen, wenn du mir gibst, was ich dafür brauche - alleine schaff ich das nicht!". Immer wieder stoße ich an herausfordernde Grenzen, aber noch öfter merke ich, dass Gott unendlich treu und gut ist.  -->
+    </p>
+  </div>
+  <div id="ref2">
+    <img src="assets/img/{{ref.ref2.img_url}}" alt="{{ref.ref2.name}}">
+    <h2>{{ref.ref2.name}}</h2>
+    <p>
+      {{ref.ref2.text}}
+    </p>
+  </div>
+  <div id="ref3">
+    <img src="assets/img/{{ref.ref3.img_url}}" alt="{{ref.ref3.name}}">
+    <h2>{{ref.ref3.name}}</h2>
+    <p>
+      {{ref.ref3.text}}
+    </p>
+  </div>
+</div>
+<!-- <img class="center" style="width: 90%;" src="assets/img/referenten.jpg" alt=""> -->
 <table class="striped">
-    <tr>
-    <td>Freitag 19:30 Uhr</td>
-    <td>
-        <b>LOVE others -LIEBE & Fremde</b><br/>
-        Aus Fremden werden Freunde - das ist doch ein schönes Ziel fürs REBOOT, oder?!Nächstenliebe ist ein ziemlich abgedroschener Begriff. Aber ihn gut zu füllen und dann auch zu leben… das will gelernt sein. Wozu das Ganze, aus welcher Kraft, und wie sich das konkret lebt, dazu gibt´s im diesjährigen Opener was zu hören.
-    </td>
-    <td>Surprise</td>
+
     </tr>
+    {% for mainsessions in site.data.programm.mainsessions %}
     <tr>
-    <td>Samstag 10:00 Uhr</td>
-    <td>
-        <b>LOVE yourself - LIEBE & Du</b><br/>
-        "Keiner liebt mich!" - "Na, dann lieb dich doch selbst." Hm, ganz so einfach ist das ja nicht. Wie kann ich gut über mich denken, ohne eingebildet zu werden? Was macht mich selbstbewusst und gibt mir Wert? Wie lerne ich mit Stärken und Schwächen umzugehen, ohne einfach nur alles hinzunehmen? Rosi spricht, aber hier geht`s um dich!
-    </td>
-    <td>Rosi Daum</td>
+    <td>{{mainsessions.time}} Uhr</td>
+    <td><b>{{mainsessions.title}}</b></td>
+    <td>{{mainsessions.ref}}</td>
     </tr>
-    <tr>
-    <td>Samstag 19:30 Uhr</td>
-    <td>
-        <b>LOVE god - LIEBE & Gott (+ Song150)</b><br/>
-        "Tausendmal gehört - tausendmal ist nichts passiert…" Mit manchen Sätzen geht es einem so, oder? Z.B. mit dem hier: "Gott liebt dich!". Wir beten darum, dass Gott diesen Abend und Joe dazu gebraucht, um seine Liebe zu dir und auch deine Liebe zu ihm neu zu beleben. Musikalisch untermauert wird die Message von song150.
-    </td>
-    <td>Joe Müller</td>
-    </tr>
-    <tr>
-    <td>Sonntag 10:00 Uhr</td>
-    <td>
-        <b>LOVE your friends - LIEBE & deine Freunde</b><br/>
-        "Ein Freund, ein guter Freund, das ist das Beste, das es gibt auf der Welt". Freundschaft, ohne Liebe ist nur ne Kumpelbeziehung. Aber wie sieht freundschaftliche Liebe aus? Rosi gibt dir Denkanstöße, wie du und ihr so ein Beziehungsnetz pflegen und flechten könnt, das einen wirklich fängt und trägt?
-    </td>
-    <td>Rosi Daum</td>
-    </tr>
-    <tr>
-    <td>Sonntag 19:30</td>
-    <td>
-        <b>LOVE to live - LIEBE & das Leben</b><br/>
-        Lieder können einen durchs Leben begleiten. Und Lieder sind voll von Liebe - auch wenn damit nicht immer dasselbe gemeint ist. Liebe das Leben, liebe dein Leben, und liebe, es zu leben. Mit einem Lied auf den Lippen lebt sich´s leichter. Tope nimmt dich mit rein in ein paar seiner Lebenslieder, die er liebt.
-    </td>
-    <td>Tope Reeber</td>
-    </tr>
-    <tr>
-    <td>Montag 10:00</td>
-    <td>
-        <b>LIVE LOVE - LIEBE & dein Alltag</b><br/>
-        Viel gehört, viel erlebt, viel zu schnell vorbei. REBOOT2015 ist (fast) rum und dein Alltag wartet auf dich. Angst, Freude, Herausforderungen, Langeweile… Egal, was dich erwartet, sei dir sicher: Gott geht mit. Los geht´s, leb was du von Gott gehört und dir vorgenommen hast. Joe motiviert dich zu einem positiven Alltagsglauben.
-    </td>
-    <td>Joe Müller</td>
-    </tr>
+    {% endfor %}
     </table>
 </div>
 

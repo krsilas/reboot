@@ -3,8 +3,8 @@ aside{
     position: fixed;
     z-index: 1;
 ul {
-    padding: 0;
     list-style: none;
+    padding: 0;
     .mdi {
         heigth: 22px;
         padding-right: 12px;
@@ -15,7 +15,8 @@ ul {
         padding: 12px 15px;
         &:hover {
         background-color: rgba(0,0,0,0.15);
-        transition: all .4s ease;}
+        transition: all .4s ease;
+      }
     }
 }
 a {
@@ -23,11 +24,16 @@ a {
     text-decoration: none;
     }
 }
+.inactive {
+  li {opacity: 0.5;}
+  li:hover {cursor: not-allowed; background-color: none !important;}
+  }
+.inactive:hover {cursor: pointer;}
 .logo {border: none;}
 @media (min-width: $tablet-size) {
     .main {margin-left: 25%;}
     aside {
-    background: url('img/love.jpg');
+    background: $brand-color;
     background-position: center;
     background-size: cover;
     color: white;
@@ -41,6 +47,7 @@ a {
         img {width: 220px; margin-bottom: 5px;}
     }
     .facts {text-align: right; font-size: 0.95em;}
+    ul {margin-top: -1.1em;}
     li {
         width: 165px;
         font-size: 1.5em;
@@ -88,7 +95,7 @@ a {
     .logo img{height: 42px; padding: 7px;}
     .facts {display: none;}
     a {color: #555555;}
-    #tabs, #tlkio {padding-top: 56px;}
+    #tabs, #logo {padding-top: 56px;}
  }
 @keyframes slideDown {
     0% {height: 56px;}

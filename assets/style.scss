@@ -2,9 +2,10 @@
 ---
 @charset "utf-8";
 
-$brand-color: #DC4141;
-$brand-color-dark: #8E2A2A;
+$brand-color: #373e44; //DC4141 836b6b
+$brand-color-dark: #293330; //8E2A2A
 $tablet-size: 880px;
+$mobile: 700px;
 
 @import
         "base", "nav", "fonts"

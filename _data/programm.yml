@@ -1,0 +1,67 @@
+referenten:
+  ref1:
+    name: Tobias Reeber
+    text: Servus! Ich bin der Tope, Baujahr 77, seit 2001 mit Emmi verheiratet, 3 Kids. Wir wohnen in Iggelheim und gehen   dort in die Evangelische Christusgemeinde. <br>  Ich mag meinen Job und REBOOT ist für mich das Jahreshighlight schlechthin. Gott ist gut. Immer.
+    img_url: tope.jpg
+  ref2:
+    name: Felix Padur
+    text: Ich bin Kinder-, Jugend- und Familienpastor im Blauen Kreuz Ansbach. Ich stehe auf richtig gute Eishockeyspiele, kann aber keine Schlittschuhe laufen, reise gerne innerhalb von 24h quer durch Deutschland und liebe es zu schlafen und zu faulenzen.
+    img_url: felix.jpg
+  ref3:
+    name: Thomas Sames
+    text: Thomas ist Jugendpastor der Landeskirchlichen Gemeinschaft Augsburg und eine Kämpfernatur. In seinem Leben hatte er schon reichlich Pech und zugleich Glück. Er selbst nennt es "Gottes drastische Art, mir den Weg zu weisen".
+    img_url: thomz.jpg
+
+mainsessions:
+  - time: Freitag 19:30
+    title: ...lebendig in meinem Herzen
+    ref: Felix Padur
+  - time: Samstag 10:00
+    title: ...lebendig in meiner Biografie
+    ref: Thomz Sames
+  - time: Samstag 19:30
+    title: ...lebendig in meinen Krisen
+    ref: Tope Reeber
+  - time: Sonntag 10:00
+    title: ...lebendig in meinen Emotionen
+    ref: Felix Padur
+  - time: Sonntag 19:30
+    title: ...lebendig in meinem Gebet
+    ref: Thomz Sames
+  - time: Montag 10:00
+    title: ...lebendig in meinen Ressourcen
+    ref: Felix Padur
+
+seminare:
+  - title: 1. Typisch Frau! Was hat das mit Gott zu tun?! (nur für junge Frauen)
+    description: "- Maike Krämer"
+  - title: 2. 1001 Einwand
+    description: Wie gehe ich mit Kritik an meinem christlichen Glauben um? Johannes Belger klärt auf.
+  - title: 3. Flirten zwischen Verbindlichkeit und Freiheit (nur für 13-17 Jährige Mädels)
+    description: Der Weg vom Singlesein bis zur Ehe ist mit manchen Stolpersteinen versehen - Frau muss aber nicht fallen. Nina Perl freut sich auf den Austausch und gibt euch Hilfen mit auf diesen Weg.
+  - title: 4. Wie kann ich Gottes Führung für mein Leben erkennen?
+    description: "- Lisa Ackermann"
+  - title: 5. Gott im Leid begegnen
+    description: "- Erik Weber"
+  - title: 6. Erwartungsvoll beten
+    description: "- David Müller"
+  - title: 7. Weißt du, was du wert bist?
+    description: "- Thomas Sames"
+  - title: 8. Partnerschaft leben und lieben
+    description: "- Emmi & Tope Reeber"
+
+workshops:
+  - title: 1. Selbstverteidigung
+    description: Weil du es wert bist! Zusammen mit Thomas Sames lernt ihr, wie ihr euch mit Tricks und gesundem Selbstvertrauen wehren könnt.
+  - title: 2. Bible Art Journaling
+    description: Kreativ die Bibel lesen. Zusammen mit Jenny Schinkel lernst du neue Wege, um das Bibellesen spannender zu gestalten.
+  - title: 3. Gitarren-Liedbegleitung
+    description: Matthias Störmer gibt dir hilfreiche Tipps, die dir helfen Lieder mit der Gitarre zu begleiten.
+  - title: 4. Kurzandachten leicht gemacht!
+    description: Carsten Perl möchte dir die Vorbereitung auf die nächste Andacht erleichtern.
+  - title: "5. KINO: To write love on her arms"
+    description: Ein Film über eine junge Frau, die mi Drogenabhängigkeit, Selbstverletzung und Depression kämpft und Hoffnung findet. <br> Für Popcorn und einen kurzen Gedankenanstoß sorgt Maike Krämer
+  - title: 6. Dance!
+    description: Heiße Moves und coole Choreos! <br> Hier wirst du zur Tanzkönigin oder zum Tanzkönig.
+  - title: 7. Sport
+    description: Volleyballtunier, Rugby & Fußball
