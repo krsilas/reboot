@@ -34,5 +34,9 @@ Für Anmeldungen und &Auml;nderungen vor Ort wird eine zusätzliche Bearbeitungs
 </p>
 
 <div class="cta">
+  {% if data.registration.open==true %}
   <a href="anmeldung.html" class="button" style="">ANMELDEN</a>
+  {% else %}
+  <a href="javascript:void(0);" onclick="alert('Die Anmeldung ist noch nicht geöffnet!');" class="button" style="">ANMELDEN</a>
+  {% endif %}
 </div>
