@@ -1,54 +1,11 @@
 ---
 layout: default
 ---
-<div id="tabs">
-    <a href="#tab1">Programm</a>
-    <a href="#tab2">Workshops</a>
-    <a href="#tab3">Seminare</a>
 </div>
-<div id="tab1"> {% assign date = site.data.data.date %}
-<h3>Freitag, {{date.start | date: "%-d." }}{% assign m = date.start | date: "%-m" %}  {% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
-<table>
-  {% for programm in site.data.shedule.day1 %}
-  <tr>
-    <td>{{programm.time}}</td>
-    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
-  </tr>
-  {% endfor %}
-</table>
-<h3>Samstag, {{date.start | date:'%s' | plus:129600 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:129600 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
-<table>
-  {% for programm in site.data.shedule.day2 %}
-  <tr>
-    <td>{{programm.time}}</td>
-    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
-  </tr>
-  {% endfor %}
-</table>
-<h3>Sonntag, {{date.start | date:'%s' | plus:194400 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:194400 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
-<table>
-  {% for programm in site.data.shedule.day3 %}
-  <tr>
-    <td>{{programm.time}}</td>
-    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
-  </tr>
-  {% endfor %}
-</table>
-<h3>Montag, {{date.start | date:'%s' | plus:259200 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:259200 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h3>
-<table>
-  {% for programm in site.data.shedule.day4 %}
-  <tr>
-    <td>{{programm.time}}</td>
-    <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
-  </tr>
-  {% endfor %}
-</table>
 </div>
 
-<div id="tab2">
 <h4>Jeweils am Samstag um 14:00 und 16:00 Uhr <br>
 (falls ein Workshop nur 1 Mal angeboten wird, wirst du das auf REBOOT erfahren)</h4>
-<br>
 <dl>
   {% for programm in site.data.programm.workshops %}
   <dt>{{programm.title}}</dt>
@@ -57,10 +14,8 @@ layout: default
 </dl>
 </div>
 
-<div id="tab3">
 <h4>Jeweils am Sonntag um 14:00 und 16:00 Uhr <br>
 (falls ein Seminar nur 1 Mal angeboten wird, wirst du das auf REBOOT erfahren)</h4>
-<br>
 <dl>
   {% for programm in site.data.programm.seminare %}
   <dt>{{programm.title}}</dt>

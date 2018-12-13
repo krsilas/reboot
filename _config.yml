@@ -4,8 +4,8 @@ url: "http://reboot.ec-pfalz.de"
 author:
     name: EC Pfalz
     webmaster: Silas Krause
-github_username:  sil4s
+github_username:  krsilas
 sass:
-    sass_dir: _sass
+    sass_dir: assets/css/
     style: compressed
 exclude: [assets/img/resources]

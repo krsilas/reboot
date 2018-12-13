@@ -1,5 +1,6 @@
 .sass-cache
 _site/
-assets/img/resources/
+assets/resources
 *.css.map
-*.sublime-workspace
+
+robots.txt

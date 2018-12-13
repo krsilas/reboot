@@ -1,0 +1,10 @@
+---
+---
+@charset "utf-8";
+
+$brand-color: #fff;
+$brand-color-dark: #31304A;
+$tablet-size: 880px;
+$mobile: 700px;
+
+@import "base", "refs", "fonts", "desktop", "programm";

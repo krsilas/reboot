@@ -1,0 +1,95 @@
+html, body {padding: 0; margin: 0; background-color: #fefefc;}
+header {
+  background: url("../img/powder.png") no-repeat, url("../img/bg.jpg") no-repeat, #eee7db;
+  background-size: 100%, cover;
+  background-position: bottom, center bottom;
+  margin-bottom: 75px;
+  text-align: center;
+  img.logo {height: 35px; padding: 24px 8px}
+  .celebrate {width: 90%;}
+  h2 {
+    color: black;
+    padding-bottom: 30px;
+    text-shadow: 0 0 14px lightgrey;
+  }
+}
+main {
+  color: $brand-color-dark;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 4%;
+  h2 {margin-top: 32px;}
+  .button+h2{margin-bottom: -20px; margin-top: 64px;}
+}
+h2 {text-align: center;}
+section h2 {
+  font-family: "Montserrat";
+  font-weight: 900; text-align: center; font-size: 2.1em;
+}
+
+article {
+  margin: 0 auto;
+  padding: 50px 0 30px 0;
+  max-width: 520px;
+  img {
+    width: 92%; height: auto;
+  }
+
+.card {
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: -2px 0px 28px rgba(grey, 0.3);
+  margin: -24px 0 0 5%;
+  padding: 16px;
+  width: 88%;
+  z-index: 2; position: relative;
+  h3 {font-weight: 700; font-size: 1.3em; line-height: 0.2em;}
+  p {font-weight: 400; line-height: 1.5em; font-size: 1.08em;}
+  }
+}
+.map {
+  border: 1px solid #cadce8;
+  border-radius: 1px;
+}
+
+.cta {
+  padding: 40px 0 120px 0;
+  text-align: center;
+  h2 {margin-bottom: 50px;}
+}
+
+.m0auto {margin: 0 auto; display: block;}
+.mw480 {max-width: 480px;}
+.mw600 {max-width: 600px; width: 100%;}
+.intro, .card p {text-align: justify;}
+.intro + .button {
+  background-color: black;
+  display: block;
+  margin: 30px auto 100px;
+  padding: 20px;
+  width: 181px;
+}
+
+.button {
+  background-color: #ea2d2d;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 20px;
+  text-decoration: none;
+  padding: 20px;
+}
+.button[href="javascript:void(0);"]{
+  cursor: not-allowed;
+}
+
+footer {
+  height: 40px;
+  background-color: #f0ece6;
+  padding: 5px 15px;
+  font-size: 16px;
+  line-height: 40px;
+  position: relative;
+  left: 0; bottom: 0; right: 0;
+  a, a:visited {color: $brand-color-dark;}
+}
