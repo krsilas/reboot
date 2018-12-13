@@ -1,8 +1,11 @@
 date:
-  start: 2017-06-02
+  start: 2018-05-18
   conflict: false
 prices:
   visitor: 35
   camper: 40
   student: 70
   earner: 85
+registration:
+  open: true
+  link: https://webanmeldesystem.de/aon_anmeldemasken/59/a.php
