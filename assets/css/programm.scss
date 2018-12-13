@@ -1,0 +1,35 @@
+.schedule {
+  #schedule, #schedule div {
+    display: block;
+    margin: 40px auto;
+    padding: 3% 2% 3% 5%;
+    transform: translateX(-4%);
+    width: 100%;
+  }
+  #schedule div:nth-of-type(odd){
+    background-color: rgba(255, 186, 95, 0.40);
+  }
+  table {
+  }
+  tr td:first-of-type{
+    font-weight: bold;
+  }
+  td {
+    font-size: 1.2rem;
+    line-height: 1.55rem;
+    padding: 12px 10px 0 0;
+    vertical-align: top;
+  }
+  //b {color: #0f3a67;}
+  h2 {margin: 6px 0; text-align: left;}
+}
+#workshops, #seminare {
+  padding: 0 0 30px 0;
+  font-size: 1.05em;
+  line-height: 1.5em;
+  h3 {font-size: 1.4em;}
+  h4, dt {font-weight: 500;}
+  dd {margin: 0 0 8px 20px;}
+}
+#workshops h3, a[href="#workshops"], a[href="#workshops"]:visited {color: #24664E; text-decoration: none;}
+#seminare h3, a[href="#seminare"], a[href="#seminare"]:visited {color: darken(#2494b1, 6%); text-decoration: none;}

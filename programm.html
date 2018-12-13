@@ -1,9 +1,66 @@
 ---
 layout: default
+color: fff
 ---
+<main class="mw480 schedule">
+<div id="schedule"> {% assign date = site.data.data.date %}
+{% assign schedule = site.data.schedule %}
+<!-- {% for programm in schedule %}
+<div class="s">
+  <h2>{{programm.date}}</h2>
 </div>
+{% endfor %} -->
+<h1 class="title">Programm</h1>
+<div class="">
+  <h2>Freitag, {{date.start | date: "%-d." }}{% assign m = date.start | date: "%-m" %}  {% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h2>
+  <table>
+    {% for programm in schedule.day1 %}
+    <tr>
+      <td>{{programm.time}}</td>
+      <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
 
+<div class="">
+  <h2>Samstag, {{date.start | date:'%s' | plus:129600 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:129600 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h2>
+  <table>
+    {% for programm in schedule.day2 %}
+    <tr>
+      <td>{{programm.time}}</td>
+      <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<div class="">
+  <h2>Sonntag, {{date.start | date:'%s' | plus:194400 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:194400 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h2>
+  <table>
+    {% for programm in schedule.day3 %}
+    <tr>
+      <td>{{programm.time}}</td>
+      <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+<div class="">
+  <h2>Montag, {{date.start | date:'%s' | plus:259200 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:259200 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}</h2>
+  <table>
+    {% for programm in schedule.day4 %}
+    <tr>
+      <td>{{programm.time}}</td>
+      <td>{{programm.activity}}<br/><b>{{programm.session}}</b></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</div>
+<div id="workshops">
+<h3>WORKSHOPS</h3>
 <h4>Jeweils am Samstag um 14:00 und 16:00 Uhr <br>
 (falls ein Workshop nur 1 Mal angeboten wird, wirst du das auf REBOOT erfahren)</h4>
 <dl>
@@ -14,6 +71,8 @@ layout: default
 </dl>
 </div>
 
+<div id="seminare">
+<h3>SEMINARE</h3>
 <h4>Jeweils am Sonntag um 14:00 und 16:00 Uhr <br>
 (falls ein Seminar nur 1 Mal angeboten wird, wirst du das auf REBOOT erfahren)</h4>
 <dl>
@@ -23,4 +82,5 @@ layout: default
   {% endfor %}
 </dl>
 </div>
-
+</main>
+<script src="assets/scripts.js"></script>
