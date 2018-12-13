@@ -93,6 +93,43 @@ footer {
   left: 0; bottom: 0; right: 0;
   a, a:visited {color: $brand-color-dark;}
 }
+
+//social buttons
+.scards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 84px;
+  width: 100%;
+}
+.scards{
+  div {
+    border-radius: 1px;
+    box-shadow: 0 5px 20px rgba(grey, 0.26);
+    font-size: 0.9em;
+    margin: 10px;
+    padding: 12px;
+    transition: all 0.13s ease-in-out;
+    width: 230px;
+    &:hover {transform: scale(1.03); transition: all 0.13s ease-in-out;}
+  }
+  a, a:visited {color: white; text-decoration: none;}
+  img {float:left; margin-right: 12px; height: 40px;}
+  p {margin: 0px; line-height: 1.4em;}
+}
+
+.facebook {
+  background-color: #3C579B;
+}
+.messenger {
+  background-color: white;
+  a, a:visited {color: #4A8AF8;}
+}
+.instagram {
+  background: linear-gradient(90deg, #f9b771 0%, #fd5949 20%,#d6249f 50%,#285AEB 100%);
+  a {font-size: 1.11em; line-height: 1.35em;}
+}
+
 //subpages
 .title {margin-bottom: 40px; margin-top:40px;}
 dd {line-height: 1.3em; margin-left: 24px;}
