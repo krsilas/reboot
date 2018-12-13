@@ -1,0 +1,39 @@
+body {
+  color: darken($brand-color-dark, 12%);
+  font-family: "Metropolis", sans-serif;
+}
+p {
+  font-size: 1.05em;
+  line-height: 1.6em;
+}
+
+// @font-face {
+//   font-family: 'Metropolis';
+//   src: url('../fonts/EOT/Metropolis-Regular.eot');
+//   src: url('../fonts/WOFF/Metropolis-Regular.woff') format('woff');
+//   font-weight: 300;
+// }
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/EOT/Metropolis-Medium.eot'),
+       url('../fonts/WOFF/Metropolis-Medium.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/EOT/Metropolis-SemiBold.eot'),
+       url('../fonts/WOFF/Metropolis-SemiBold.woff') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/EOT/Metropolis-Bold.eot'),
+       url('../fonts/WOFF/Metropolis-Bold.woff') format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/EOT/Metropolis-Black.eot'),
+       url('../fonts/WOFF/Metropolis-Black.woff') format('woff');
+  font-weight: 900;
+}
