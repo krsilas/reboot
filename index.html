@@ -1,30 +1,81 @@
 ---
 layout: default
-title: Index
+title: Reboot - Pfingstjugendtreffen
+color: E8E8E8
 ---
-<img id="logo" src="assets/img/banner17.jpg" alt="We Believe">
-<div class="grad"></div>
-<p>JUGENDTREFFEN für alle ab 13 Jahren <br> Auf dem Programm steht: </p>
-<ul>
-    <li><img src="assets/img/message.png" />Message</li>
-    <li><img src="assets/img/music.png" />Musik</li>
-    <li><img src="assets/img/action.png" />Action</li>
-    <li><img src="assets/img/coctail.png" />Bistro</li>
-    <li><img src="assets/img/fire.png" />Lagerfeuer</li>
-    <li><img src="assets/img/dj.png" />Feiern</li>
-    <li><img src="assets/img/essen.png" />mega Essen</li>
-    <li><img src="assets/img/gem.png" />Gemeinschaft</li>
-</ul>
-<p id="date"> {% assign date = site.data.data.date %}
-  <b>Datum:</b><br>Freitag, {{date.start | date: "%-d." }}{% assign m = date.start | date: "%-m" %}  {% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %} - Montag, {{date.start | date:'%s' | plus:259200 | date:"%-d."}}{% assign m = date.start | date:'%s' | plus:259200 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %}
+
+{% include header.html %}
+
+<main>
+
+  <h2>Was ist Reboot?</h2>
+  <p class="intro mw600 m0auto">
+  Reboot ist ein Event für Jugendliche ab 13 Jahren und junge Erwachsene.
+  Es findet jedes Jahr an Pfingsten in Lachen-Speyerdorf statt. <br> Vier Tage und drei Nächte, vollgepackt mit Message, Musik, Action, Bistro, Lagerfeuer, Feiern, genialem Essen und einer hammer Gemeinschaft. <br>
+  Dieses Jahr lautet das Motto "CELEBRATE"! Sei dabei und feier mit!
+  </p>
+  <a href="programm.html" class="button">ZUM PROGRAMM</a>
+
+  <h2>Was erwartet dich?</h2>
+  <article>
+    <img src="assets/img/bible.jpg" alt="Bibel">
+    <div class="card" id="c1">
+      <h3>Message und Seminare</h3>
+      <p>Das Herz von Reboot ist es dich auf deinem Weg mit Jesus zu stärken. Die lebensnahen Impulse sollen dein Leben bereichern und helfen Gott kennen zu lernen. Egal ob du schon ein alter Hase bist oder noch viele Fragen hast: Für dich ist etwas dabei und du bist herzlich willkommen!</p>
+    </div>
+  </article>
+
+{% include referenten.html %}
+
+  <article>
+    <img src="assets/img/band.jpg" alt="Band">
+    <div class="card" id="c2">
+      <h3>Musik</h3>
+      <p>Wir wollen feiern! Und das geht nicht ohne Musik. Wir wollen mit zeitgemäßer Musik laut werden und unsere Freude und Gedanken ausdrücken. Es gibt so viele Dinge, für die wir dankbar sein können und die Band wird uns richtig einheizen.</p>
+    </div>
+  </article>
+
+  <article>
+    <img src="assets/img/rugby.jpg" alt="Action">
+    <div class="card" id="c3">
+      <h3>Action und Workshops</h3>
+      <p>Reboot wird niemals langweilig! Auf dem riesigen Fußballfeld ist immer genügend Platz zum Kicken, Frisbee oder Rugby spielen. Auch das Beachvolleyball-Turnier und viele andere Workshops geben dir die Möglichkeit dich ordentlich auszutoben.</p>
+    </div>
+  </article>
+
+  <article>
+    <img src="assets/img/feiern.jpg" alt="Bistro">
+    <div class="card" id="c4">
+      <h3>Feiern / Bistro</h3>
+      <p>Das Bistrozelt ist die Quelle für gute Stimmung. Tagsüber kannst du es dir dort bei chilligen Beats, Eis und kühlen Getränken gemütlich machen. Und Abends wird richtig aufgedreht, getanzt und gefeiert bis man todmüde ins Bett fällt.</p>
+    </div>
+  </article>
+
+  <article>
+    <img src="assets/img/fire.jpg" alt="Lagerfeuer">
+    <div class="card" id="c5">
+      <h3>Zusammenhalt</h3>
+      <p>Reboot ist immer ein Ort, wo neue Freundschaften entstehen und sich Beziehungen vertiefen.
+        Überall ist eine freundschaftliche Atmosphäre und gute Laune, egal ob in der Essensschlange oder abends am Lagerfeuer. Eine Gemeinschaft, wo du wirklich zuhause sein kannst.
+        </p>
+    </div>
+  </article>
+
+{% include social.html %}
+
+<h2>Anfahrt</h2>
+<a href="https://goo.gl/maps/WksHDUTetDr">
+  <img class="map mw600 m0auto" src="assets/img/gmaps.jpg" alt="Google Maps">
+</a>
+<br>
+<p class="mw600 m0auto">
+  Flugplatzstraße 95 <br>
+  67435 Neustadt an der Weinstraße <br>
+  <a style="color:#3180b9;" href="https://goo.gl/maps/WksHDUTetDr">Google Maps</a>
 </p>
-<div class="cta" id="cdd">
-  <a href="/programm" class="button">Zum Programm <img class="icon icons8-Forward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA9UlEQVRoQ+3ZwQ3CMBBE0UknlAaVQWdQCvLBEkJckp35K6Pknug/by4rb1r82Rbv1wnonqBrAhdJrw6MA3CVdJd0k/SgEVXAjJ/dOKICGL/N88eJo4gKYLR/TwCfRBXQjnAAWhEuQBvCCWhBuAE4IgFAESkAhkgCEEQaEEcQgCiCAsQQJCCCoAF2RAfAiugC2BAn4OAObFuEOiZgix+HRwOs8TTAHk8CIvEUIBZPAKLxaUA8PglA4lMALD4BQOPdADzeCWiJdwHa4h2A1vgq4C8vONDbmeoE5i6z9CXfRCx9zXpwq/S8Rm9knuqPr5wA+5Hu/OAbastOMV6G9bYAAAAASUVORK5CYII=" width="15" height="15"></a>
+<div class="cta">
+  <h2>Wir freuen uns auf dich!</h2>
+  <a href="preise.html" class="button" style="">JETZT ANMELDEN</a>
 </div>
-<div class="cta" id="cdr">
-  <p>Reboot started in:</p><div id="countdown"></div><a href="https://www.facebook.com/reboot.lachen/videos/511802059015311/" class="button">Aftermovie <img class="icon icons8-Forward" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA9UlEQVRoQ+3ZwQ3CMBBE0UknlAaVQWdQCvLBEkJckp35K6Pknug/by4rb1r82Rbv1wnonqBrAhdJrw6MA3CVdJd0k/SgEVXAjJ/dOKICGL/N88eJo4gKYLR/TwCfRBXQjnAAWhEuQBvCCWhBuAE4IgFAESkAhkgCEEQaEEcQgCiCAsQQJCCCoAF2RAfAiugC2BAn4OAObFuEOiZgix+HRwOs8TTAHk8CIvEUIBZPAKLxaUA8PglA4lMALD4BQOPdADzeCWiJdwHa4h2A1vgq4C8vONDbmeoE5i6z9CXfRCx9zXpwq/S8Rm9knuqPr5wA+5Hu/OAbastOMV6G9bYAAAAASUVORK5CYII="  width="15" height="15"></a>
-</div>
-<p>Veranstaltungsort: <a href="https://goo.gl/maps/LEvgc">Diakonissen-Mutterhaus Lachen</a></p>
-<br><br>
-<img class="center" style="max-width:400px; width:95%;" src="assets/img/ec-pfalz.png" alt="ec-pfalz-logo" />
-<br><br>
+</main>
+<script src="assets/scripts.js"></script>

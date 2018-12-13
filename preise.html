@@ -1,46 +1,42 @@
 ---
 layout: default
+title: Preisliste
+color: E63A3F
 ---
+<main class="mw480">
 {% assign data = site.data.data %}
 <h1 class="title">Anmeldung</h1>
 <div class="prices">
 <h3>Dauergäste</h3>
     <div>
-        <img src="assets/img/camp.png" alt="Camper" id="camper"></img>
+        <img src="assets/img/tent.svg" alt="Camper" />
         <h4>Camper (eigenes Zelt)</h4>
         <h3>{{data.prices.camper}}€</h3>
     </div>
     <div>
-        <img src="assets/img/nomoney.png" alt="Nicht-Verdiener"></img>
+        <img src="assets/img/piggy.svg" alt="Nicht-Verdiener" />
         <h4>Nicht-Verdiener (Haus)</h4>
         <h3>{{data.prices.student}}€</h3>
     </div>
     <div>
-        <img src="assets/img/money.png" alt="Verdiener"></img>
+        <img src="assets/img/money.svg" alt="Verdiener" />
         <h4>Verdiener (Haus)</h4>
         <h3>{{data.prices.earner}}€</h3>
     </div>
 </div>
-<div id="guest">
 <h3>Tagesgäste</h3>
 <p>{{data.prices.visitor}}€ (inkl. Essen)</p>
-<table id="infos">
-<tr>
-<td><i class="mdi mdi-google-maps"></i></td>
-<td><a href="https://goo.gl/maps/LEvgc" target="_blank">Diakonissen-Mutterhaus Lachen</a></td>
-</tr>
-<tr>
-<td><i class="mdi mdi-facebook-box"></i></td>
-<td><a href="https://www.facebook.com/reboot.lachen" target="_blank">Facebook-Page</a></td>
-</tr>
-</table>
-</div>
-<p id="warning">
-Anmeldeschluss: Montag, {{data.date.start | date:'%s' | minus:345600 | date:"%-d. "}}{% assign m = data.date.start | date:'%s' | minus:345600 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %} - Mindestalter: 13 Jahre <br>
+</main>
+
+<p class="warning">
+Anmeldeschluss: Samstag, {{data.date.start | date:'%s' | minus:518400 | date:"%-d. "}}{% assign m = data.date.start | date:'%s' | minus:518400 | date:"%-m" %}{% case m %}{% when '5' %}Mai{% when '6' %}Juni{% endcase %} - Mindestalter: 13 Jahre <br>
 Für Anmeldungen und &Auml;nderungen vor Ort wird eine zusätzliche Bearbeitungsgeb&uuml;hr von 5€ erhoben.
 </p>
-<a href="#" onclick="alert('Die Onlineanmeldung ist noch nicht eröffnet!')" class="button">ANMELDEN</a>
-<div id="php"></div>
-<br>
 
-
+<div class="cta">
+  {% if data.registration.open==true %}
+  <a href="anmeldung.html" class="button" style="">ANMELDEN</a>
+  {% else %}
+  <a href="javascript:void(0);" onclick="alert('Die Anmeldung ist noch nicht geöffnet!');" class="button" style="">ANMELDEN</a>
+  {% endif %}
+</div>

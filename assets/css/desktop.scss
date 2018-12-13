@@ -1,0 +1,22 @@
+@media (min-width:840px) {
+  article {
+    margin-bottom: -220px;
+    max-width: 900px;
+    img,.card {width: 60%;}
+    .card {
+      position: relative;
+      z-index: 3;
+      top: -220px;
+      left: 40%;
+      max-width: 400px;
+      font-size: 115%;
+      padding: 30px;
+      line-height: 140%;
+    }
+  }
+  .mw600 {max-width: 640px;}
+  .intro {font-size: 110%; line-height: 1.6em;}
+}
+@media (min-width: 610px) and (max-width:910px){
+  .scards{width: 280px; margin: 0 auto;}
+}

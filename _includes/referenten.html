@@ -1,0 +1,25 @@
+<section id="refs">
+  <h2>REFERENTEN</h2>
+  {% assign ref = site.data.programm.referenten %}
+
+  <div class="tabs">
+    <img id="t1" class="tab active" src="assets/img/{{ref.ref1.img_url}}" alt="{{ref.ref1.name}}">
+    <img id="t2" class="tab" src="assets/img/{{ref.ref2.img_url}}" alt="{{ref.ref2.name}}">
+    <img id="t3" class="tab" src="assets/img/{{ref.ref3.img_url}}" alt="{{ref.ref3.name}}">
+  </div>
+
+  <div class="sbubbles">
+    <div id="i1" class="item active">
+      <h4>{{ref.ref1.name}}</h4>
+      <p>{{ref.ref1.text}}</p>
+    </div>
+    <div id="i2" class="item">
+      <h4>{{ref.ref2.name}}</h4>
+      <p>{{ref.ref2.text}}</p>
+    </div>
+  <div id="i3" class="item">
+      <h4>{{ref.ref3.name}}</h4>
+      <p>{{ref.ref3.text}}</p>
+    </div>
+  </div>
+</section>

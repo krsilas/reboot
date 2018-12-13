@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
-{% include head.html %}
+<html lang="de">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page.title}}</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description" content="Reboot ist ein jährliches Event für Jugendliche. Auf dem Programm stehen Message, Musik, Action, Bistro, Lagerfeuer, Feiern, mega Essen und Gemeinschaft">
+  <meta name="keywords" content="Reboot, Pfingsten, Jugendtreffen, Lachen-Speyerdorf, Speyerdorf, Lachen, Christlich, EC, Pfalz, Diakonissen, Mutterhaus">
+  <meta name="author" content="EC Pfalz">
+  <meta name="theme-color" content="#{{page.color}}">
+</head>
+<!--[if lte IE 9]>
+<p class="chromeframe">Du verwendest einen sehr <strong>veralteten</strong> Browser. Bitte <a href="http://www.whatbrowser.org/intl/de/">aktualisiere deinen Browser</a>, um die Seite bestmöglich darzustellen.</p>
+<![endif]-->
+
 <body>
-{% include aside.html %}
-<div class="main">
-<div class="content {% if page.url == '/social.html' %}social{% endif %}{% if page.url == '/preise.html' %}preise{% endif %}{% if page.title== 'Index' %}index{% endif %}{% if page.url == '/programm.html' %}tabs{% endif %}{% if page.url == '/anmeldung.html' %}anmeldung{% endif %}">
 {{ content }}
-</div>
-</div>
+{% include footer.html %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
+<!-- Google Analytics 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38956046-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-38956046-1');
+  </script>
+-->
 </body>
-<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-$("#hamburger").click(function() {
-$("#hamburger, aside").toggleClass('active');
-});{% if page.url == '/pics.html' %}
-$(document).mousedown(function(event){if(event.which === 3) {alert('Aus rechtlichen Gründen sind die Bilder kopiergeschützt! Bitte melde dich persönlich, falls du Bilder brauchst.');}});{% endif %}
-{% if page.url == '/programm.html' %}
-$("#tabs").each(function(){var a,h,i=$(this).find("a");a=$(i.filter('[href="'+location.hash+'"]')[0]||i[0]),a.addClass("active"),h=$(a[0].hash),i.not(a).each(function(){$(this.hash).hide()}),$(this).on("click","a",function(i){a.removeClass("active"),h.hide(),a=$(this),h=$(this.hash),a.addClass("active"),h.show(),i.preventDefault()})});{% endif %}
-</script>
-{% if page.title == 'Index' %}<script src="assets/js/countdown.js"></script>{% endif %}
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&subset=latin' rel='stylesheet' type='text/css'>
-{% include ganalytics.html %}
 </html>

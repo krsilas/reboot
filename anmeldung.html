@@ -1,12 +1,8 @@
 ---
 layout: default
+title: Reboot - Anmeldung
+color: E63A3F
 ---
-<iframe style="" src="http://www.webanmeldesystem.de/aon_anmeldemasken/52/a.php"></iframe>
-<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="  crossorigin="anonymous"></script>
-<script type="text/javascript">
-jQuery(document).ready(function() {
-    var height = $(window).height();
-    $('iframe').css('height', height-3);
-});
-</script>
-
+<div class="reg">
+  <iframe src="{{site.data.data.registration.link}}"></iframe>
+</div>
